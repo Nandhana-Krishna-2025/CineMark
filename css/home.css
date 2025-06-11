@@ -82,7 +82,7 @@ body {
   color: #ffe5b6;
 }
 
-.genre-filters label {
+.type-filters label {
   display: block;
   margin-bottom: 8px;
   cursor: pointer;
