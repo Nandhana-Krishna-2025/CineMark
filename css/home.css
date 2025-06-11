@@ -52,12 +52,13 @@ body {
     font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;  
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer; 
     width: 150px;
 }
 
 .buttons button:hover {
-    background-color: #2d2c25;
+    transform: scale(1.03);
 }
 
 .main {
@@ -68,7 +69,7 @@ body {
 }
 
 .sidebar {
-  width: 250px;
+  width: 20%;
   background-color: #1e1e1e;
   color: #ffffff;
   padding: 20px;
@@ -76,11 +77,24 @@ body {
 }
 
 .sidebar h2 {
-  font-size: 20px;
+  font-size: large;
+  font-weight: 600;
   margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center;
   color: #ffe5b6;
+  background-color: #3a3a3a;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
+
+.sidebar h2:hover {
+  background-color: #575757; 
+  transform: scale(1.03); 
+}
+
 
 .type-filters label {
   display: block;
@@ -91,15 +105,27 @@ body {
   text-align:left;
 }
 
-.genre-filters input[type="checkbox"] {
+.type-filters input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+ .release-year label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #ffe5b6;
+  font-size: large;
+  text-align:left;
+}
+
+.release-year input[type="checkbox"] {
   margin-right: 8px;
 }
 
 .nav-buttons {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .nav-buttons button {
@@ -110,7 +136,8 @@ body {
   cursor: pointer;
   border-radius: 6px;
   font-size: large;
-  margin: 10px;
+  font-weight: 500;
+  
 }
 
 .nav-buttons button:hover {
