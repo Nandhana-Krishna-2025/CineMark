@@ -1,0 +1,125 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    color: #faf1f1;
+    padding: 20px;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #050505;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #ffe5b6;  
+} 
+
+.logo {
+    display: flex;
+    align-items: center; 
+    }
+
+.logo img {
+    height: 150px;
+    margin-right: 10px;
+    } 
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 800px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 25px;    
+} 
+
+.buttons button {
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    background-color: #ffe5b6;
+    color: rgb(5, 5, 5);
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+    width: 150px;
+}
+
+.buttons button:hover {
+    background-color: #2d2c25;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffe5b6;
+}
+
+.genre-filters label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #ffe5b6;
+  font-size: large;
+  text-align:left;
+}
+
+.genre-filters input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 10px;
+  background-color: #3a3a3a;
+  color: #ffe5b6;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: large;
+  margin: 10px;
+}
+
+.nav-buttons button:hover {
+  background-color: #575757;
+}
+
+.movie-list {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
