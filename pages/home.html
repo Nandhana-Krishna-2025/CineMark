@@ -1,9 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CineMark - Movie Browser</title>
+  <link href="/css/home.css" rel="stylesheet"/>
 </head>
-<body>
-  <h1>Welcome to the Home Page</h1>
-</body>
+  <body>
+    <header>
+        <div class="nav">
+
+            <div class="logo">
+                <img src="./golden(2)(1).png" alt="logo"> 
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="search your Favourite movie...">
+            </div>
+
+            <div class="buttons">
+                <button class="sort">Sort</button>
+                <button class="home">Home</button>
+            </div>
+
+        </div>
+    </header>
+    <section class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Genre</h2>
+      <div class="genre-filters">
+        <label><input type="checkbox" value="Comedy"> Comedy</label>
+        <label><input type="checkbox" value="Thriller"> Thriller</label>
+        <label><input type="checkbox" value="Romance"> Romance</label>
+        <label><input type="checkbox" value="Drama"> Drama</label>
+        <label><input type="checkbox" value="Horror"> Horror</label>
+      </div>
+
+      <div class="nav-buttons">
+        <button onclick="location.href='favorites.html'">Favorites</button>
+        <button onclick="location.href='watched.html'">Watched</button>
+      </div>
+    </div>
+
+    <!-- Movie list -->
+    <div class="movie-list">
+      <!-- Movie cards will be dynamically added here -->
+    </div>
+  </section>
+  
+
+
+  </body>
 </html>
