@@ -5,7 +5,7 @@ function renderMovie(movie, container) {
   const div = document.createElement("div");
   div.className = "movie-card";
   div.innerHTML = `
-    <img src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}" />
+    <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';"/>
     <div class="movie-info">
       <h3>${movie.Title}</h3>
       <p>${movie.Year}</p>
