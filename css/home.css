@@ -64,8 +64,8 @@ body {
 .main {
   display: flex;
   min-height: 100vh;
-  margin: 20px;
   margin-top: 30px;
+ 
 }
 
 .sidebar {
@@ -218,4 +218,89 @@ body {
 }
 .movie-actions button:hover {
   transform: scale(1.2);
+}
+
+.pagination-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-controls button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  font-size: large;
+  border: none;
+  background-color: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:hover {
+  background-color: #bbb;
+}
+
+.pagination-controls button.active-page {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pagination-controls button:disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.footer {
+  background-color: #333;
+  color: #cfcbcb;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-top {
+  display: flex;
+  padding: 10px 30px;
+  background-color:#333;
+}
+
+.footer-logo img {
+  width: 150px;
+  height: 75px;
+  margin-right: 10px;
+  background-color: #333;
+  padding: 10px 10px;
+  
+}
+
+ .footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.social {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+  border-left: 0%;
+  padding-left: 1250px;
+ 
+}
+
+.icons img {
+  width: 24px;
+  margin: 0 8px;
 }
