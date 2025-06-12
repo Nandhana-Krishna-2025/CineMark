@@ -11,15 +11,16 @@
         <div class="nav">
 
             <div class="logo">
-                <img src="./golden(2)(1).png" alt="logo"> 
+                <img src="/assets/logo.png" alt="logo"> 
             </div>
 
-            <div class="search-bar">
-                <input type="text" placeholder="search your Favourite movie...">
-            </div>
+           <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search your Favourite movie..." autocomplete="off">
+            <div id="suggestions" class="suggestion-box"></div>
+           </div>
+
 
             <div class="buttons">
-                <button class="sort">Sort</button>
                 <button class="home">Home</button>
             </div>
 
@@ -28,28 +29,71 @@
     <section class="main">
     <!-- Sidebar -->
     <div class="sidebar">
-      <h2>Genre</h2>
-      <div class="genre-filters">
-        <label><input type="checkbox" value="Comedy"> Comedy</label>
-        <label><input type="checkbox" value="Thriller"> Thriller</label>
-        <label><input type="checkbox" value="Romance"> Romance</label>
-        <label><input type="checkbox" value="Drama"> Drama</label>
-        <label><input type="checkbox" value="Horror"> Horror</label>
+      <h2>Type</h2>
+      <div class="type-filters">
+        <label><input type="checkbox" value="movie"> Movie</label>
+        <label><input type="checkbox" value="series"> Series</label>
+        <label><input type="checkbox" value="episode"> Episode</label>
       </div>
-
+      <h2>Release year</h2>
+      <div class="release-year">
+        <label><input type="checkbox" name="releaseYear" value="2024"> 2024</label><br>
+        <label><input type="checkbox" name="releaseYear" value="2023"> 2023</label><br>
+        <label><input type="checkbox" name="releaseYear" value="2022"> 2022</label><br>
+        <label><input type="checkbox" name="releaseYear" value="2021"> 2021</label><br>
+        <label><input type="checkbox" name="releaseYear" value="2020"> 2020</label><br>
+      </div>
       <div class="nav-buttons">
-        <button onclick="location.href='favorites.html'">Favorites</button>
-        <button onclick="location.href='watched.html'">Watched</button>
+        <button onclick="location.href='./favourite.html'">Favourites</button>
+        <button onclick="location.href='./watched.html'">Watched</button>
       </div>
     </div>
 
-    <!-- Movie list -->
+    
     <div class="movie-list">
-      <!-- Movie cards will be dynamically added here -->
+       <div id="movieContainer" class="movie-grid"></div>
+       <div id="paginationControls" class="pagination-controls"></div>    
     </div>
-  </section>
-  
 
+  </section>
+
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-section">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="/assets/logo.png" alt="CineMark Logo" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>ABOUT</h4>
+      <br />
+      <ul>
+        <li>Terms & Conditions</li>
+        <br />
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <p>copyright@2025 CineMark</p>
+    </div>
+
+    <div class="icons">
+      <a href="#"><img src="/assets/icons/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" /></a>
+      <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" /></a>
+    </div>
+  </footer>
+
+  
+  <script src="/scripts/home.js"></script>
+  <script src="/scripts//pagination.js"></script>
+  <script src="/scripts//filtering.js"></script>
+  
 
   </body>
 </html>
