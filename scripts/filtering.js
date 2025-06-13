@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.renderPage(filtered, movieContainer);
   }
 
-  // Event Listeners
+  
   typeCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
   yearInput.addEventListener("input", debounce(applyFilters, 600));
 });
 
-// Simple debounce to avoid too many calls while typing
+
 function debounce(func, delay) {
   let timeout;
   return function (...args) {

@@ -50,19 +50,17 @@ async function fetchAllMovies() {
 document.addEventListener("DOMContentLoaded", fetchAllMovies);
 
 
-// DOM reference
+
 const searchInput = document.getElementById("searchInput");
 
-// Live search on input
 searchInput.addEventListener("input", (e) => {
   const query = e.target.value.toLowerCase();
 
-  // Filter from the fetched movies
   const filteredMovies = allFetchedMovies.filter(movie =>
     movie.Title.toLowerCase().includes(query)
   );
 
-  // Call global pagination renderer
+
   window.renderPage(filteredMovies, movieContainer);
 });
 
@@ -94,7 +92,6 @@ function applyFilters() {
   window.renderPage(filtered, movieContainer);
 }
 
-// Attach listeners after DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   const typeCheckboxes = document.querySelectorAll(".type-filters input[type='checkbox']");
   const yearCheckboxes = document.querySelectorAll(".release-year input[type='checkbox']");
