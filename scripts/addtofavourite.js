@@ -18,9 +18,7 @@ function renderMovie(movie) {
             class="heart-icon"
           />
         </button>
-        <button class="watch-btn" title="Add to Watchlist">
-          <img src="/assets/icons/tick-icon.png" alt="Add to Watchlist" />
-        </button>
+       
       </div>
     </div>
   `;
@@ -63,7 +61,5 @@ function isMovieFavourited(id) {
   return favourites.some(movie => movie.id === id);
 }
 
-function addToWatchlist(id, title, year) {
-  alert(`Added to Watchlist: ${title} (${year})`);
-}
+
 
