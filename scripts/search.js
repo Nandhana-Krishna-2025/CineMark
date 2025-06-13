@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderSuggestions(movies) {
     suggestionsBox.innerHTML = "";
 
-    movies.slice(0, 5).forEach(movie => {
+    movies.slice(0, 10).forEach(movie => {
       const item = document.createElement("div");
       item.className = "suggestion-item";
       item.innerHTML = `<strong>${movie.Title}</strong> (${movie.Year})`;
