@@ -11,10 +11,10 @@ function renderMovie(movie, container) {
       <p>${movie.Year}</p>
       <div class="movie-actions">
         <button class="fav-btn" title="Add to Favorites" onclick="addToFavorites('${movie.imdbID}', '${movie.Title}', '${movie.Year}')">
-          <img src="/assets/icons/heart-icon.png" alt="Add to Favorites" />
+          <img src="/assets/icons/plain_heart.png" alt="Add to Favorites" />
         </button>
         <button class="watch-btn" title="Add to Watchlist" onclick="addToWatchlist('${movie.imdbID}', '${movie.Title}', '${movie.Year}')">
-          <img src="/assets/icons/tick-icon.png" alt="Add to Watchlist" />
+          <img src="/assets/icons/tick.png" alt="Add to Watchlist" />
         </button>
       </div>
     </div>
