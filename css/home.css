@@ -109,6 +109,7 @@ body {
   margin-right: 8px;
 }
 
+/*
  .release-year label {
   display: block;
   margin-bottom: 8px;
@@ -120,6 +121,24 @@ body {
 
 .release-year input[type="checkbox"] {
   margin-right: 8px;
+}
+*/
+.sidebar input[type="text"] {
+  width: 90%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect for better UX */
+.sidebar input[type="text"]:focus {
+  border-color: #007BFF;
+  background-color: #fff;
 }
 
 .nav-buttons {

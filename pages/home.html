@@ -21,7 +21,7 @@
 
 
             <div class="buttons">
-                <button class="home">Home</button>
+                <button class="home" onclick="location.href='./home.html'">Home</button>
             </div>
 
         </div>
@@ -35,6 +35,7 @@
         <label><input type="checkbox" value="series"> Series</label>
         <label><input type="checkbox" value="episode"> Episode</label>
       </div>
+      <!---
       <h2>Release year</h2>
       <div class="release-year">
         <label><input type="checkbox" name="releaseYear" value="2024"> 2024</label><br>
@@ -42,7 +43,16 @@
         <label><input type="checkbox" name="releaseYear" value="2022"> 2022</label><br>
         <label><input type="checkbox" name="releaseYear" value="2021"> 2021</label><br>
         <label><input type="checkbox" name="releaseYear" value="2020"> 2020</label><br>
-      </div>
+      </div> 
+    -->
+    
+    <h2>Release Year (comma-separated)</h2>
+    <input type="text" id="yearInput" placeholder="e.g. 2023,2024" />
+
+    
+
+
+
       <div class="nav-buttons">
         <button onclick="location.href='./favourite.html'">Favourites</button>
         <button onclick="location.href='./watched.html'">Watched</button>
