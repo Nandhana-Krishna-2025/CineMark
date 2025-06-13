@@ -17,7 +17,9 @@ function renderMovie(movie) {
             class="heart-icon"
           />
         </button>
-       
+       <button class="watch-btn" title="Add to Watchlist" onclick="addToWatchlist('${movie.imdbID}', '${movie.Title}', '${movie.Year}')">
+          <img src="/assets/icons/tick.png" alt="Add to Watchlist" />
+        </button>
       </div>
     </div>
   `;
