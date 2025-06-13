@@ -47,14 +47,6 @@ async function fetchAllMovies() {
 }
 
 
-function addToFavorites(id, title, year) {
-  alert(`Added to Favorites: ${title} (${year})`);
-}
-
-function addToWatchlist(id, title, year) {
-  alert(`Added to Watchlist: ${title} (${year})`);
-}
-
 document.addEventListener("DOMContentLoaded", fetchAllMovies);
 
 
