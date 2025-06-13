@@ -1,6 +1,6 @@
-const apiKey = "5bedaa04";
+const apiKey = "57d7ef30";
 const keywords = ["The","A", "Day", "Night", "Man", "Love", "Home", "Batman", "Friends"]
-const fetchLimit = 90;
+const fetchLimit = 120;
 
 const movieContainer = document.getElementById("movieContainer");
 const displayedMovies = new Set();
