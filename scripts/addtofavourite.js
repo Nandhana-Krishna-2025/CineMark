@@ -1,4 +1,3 @@
-
 function renderMovie(movie) {
   const isFav = isMovieFavourited(movie.imdbID);
 
@@ -29,10 +28,10 @@ function renderMovie(movie) {
     addToFavourites(heartIcon, movie.imdbID, movie.Title, movie.Year, movie.Poster)
   );
 
-  const watchBtn = div.querySelector(".watch-btn");
-  watchBtn.addEventListener("click", () =>
-    addToWatchlist(movie.imdbID, movie.Title, movie.Year)
-  );
+  // const watchBtn = div.querySelector(".watch-btn");
+  // watchBtn.addEventListener("click", () =>
+  //   addToWatchlist(movie.imdbID, movie.Title, movie.Year)
+  // );
 
   movieContainer.appendChild(div);
 }
