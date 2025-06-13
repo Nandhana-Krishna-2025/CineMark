@@ -19,6 +19,8 @@ function renderMovie(movie, container) {
       </div>
     </div>
   `;
+
+  
   container.appendChild(div);
 }
 
