@@ -13,7 +13,7 @@
         <div class="nav">
 
             <div class="logo">
-                <img src="/assets/logo.png" alt="logo"> 
+                <img src="/assets/images/logo.png" alt="logo"> 
             </div>
 
             <div class="search-bar">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="buttons">
-                <button class="home">Home</button>
+                <button class="home" onclick="location.href='./home.html'">Home</button>
             </div>
 
         </div>
@@ -32,12 +32,13 @@
     <!-- Sidebar -->
   <div class="sidebar">
       <h2>Favourites</h2>
-      <img src="/assets/heart.png" alt="heart_logo"> 
+      <img src="/assets/icons/red_heart.png" alt="heart_logo"> 
   </div>
 
     <!-- Movie list -->
   <div class="movie-list">
       <!-- Movie cards will be dynamically added here -->
+<div id="favouritesContainer" class="fav-ones"></div>
   </div>
 </section>
 
@@ -70,7 +71,7 @@
       <a href="#"><img src="facebook.png" alt="Facebook" /></a>
     </div>
   </footer>
-
+<script src="/scripts/favourite.js"></script>
  
 </body>
 </html>
