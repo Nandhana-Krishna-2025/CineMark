@@ -3,8 +3,8 @@
 <head>
     <meta charset = "UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <title>Favourite Movies</title>
-    <link rel="stylesheet" href="/css/favourite.css"/>
+    <title>watched Movies</title>
+    <link rel="stylesheet" href="/css/watched.css"/>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <div class="nav">
 
             <div class="logo">
-                <img src="/assets/images/logo.png" alt="logo"> 
+                <img src="/assets/image/logo.png" alt="logo"> 
             </div>
 
             <div class="search-bar">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="buttons">
-                <button class="home" onclick="location.href='./home.html'">Home</button>
+                <button class="home">Home</button>
             </div>
 
         </div>
@@ -31,15 +31,14 @@
 <section class="main">
    
   <div class="sidebar">
-      <h2>Favourites</h2>
-      <img src="/assets/icons/red_heart.png" alt="heart_logo"> 
+      <h2>Watched</h2>
+      <img src="/assets/icons/ticked.png" alt="heart_logo"> 
   </div>
 
-   
-  <div class="movie-list">
-      <div id="favouritesContainer" class="fav-ones"></div>
-  </div>
+<div class="movie-list">
+     <div id="watchedContainer" class="movie-list"></div>
 
+  </div>
 </section>
 
 <footer class="footer">
@@ -71,7 +70,7 @@
       <a href="#"><img src="facebook.png" alt="Facebook" /></a>
     </div>
   </footer>
-<script src="/scripts/favourite.js"></script>
+
  
 </body>
 </html>
