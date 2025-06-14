@@ -66,12 +66,12 @@
     }
 
    
+    // const uniqueMovies = Array.from(
+    //   new Map(results.map(m => [m.imdbID, m])).values()
+    // );
     const uniqueMovies = Array.from(
-      new Map(results.map(m => [m.imdbID, m])).values()
-    );
-//     const uniqueMovies = Array.from(
-//     new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
-// );
+    new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
+);
 
 
 
