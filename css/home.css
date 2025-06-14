@@ -191,7 +191,7 @@ body {
 
 
 .sidebar input[type="text"]:focus {
-  border-color: #007BFF;
+  border-color: #fff;
   background-color: #fff;
 }
 
