@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const typeCheckboxes = document.querySelectorAll(".type-filters input[type='checkbox']");
   const yearInput = document.getElementById("yearInput");
   const movieContainer = document.getElementById("movieContainer");
@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const uniqueMovies = Array.from(
       new Map(results.map(m => [m.imdbID, m])).values()
     );
+//     const uniqueMovies = Array.from(
+//     new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
+// );
+
+
 
     window.renderPage(uniqueMovies, movieContainer);
   }
