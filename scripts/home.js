@@ -100,3 +100,43 @@ document.addEventListener("DOMContentLoaded", () => {
   yearCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
 });
 
+// let currentSlide = 0;
+// const slides = document.querySelectorAll(".slide");
+
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     slide.style.display = i === index ? "block" : "none";
+//   });
+// }
+
+// function moveSlide(direction) {
+//   currentSlide = (currentSlide + direction + slides.length) % slides.length;
+//   showSlide(currentSlide);
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   showSlide(currentSlide);
+// });
+
+let currentSlide = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  function autoSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+
+  showSlide(currentSlide);
+
+
+  setInterval(autoSlide, 4000);
+});
