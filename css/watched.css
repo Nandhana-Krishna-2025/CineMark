@@ -59,13 +59,18 @@ body {
 } 
 
 .buttons button {
-    transition: transform 0.fav-ones{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}.3s ease; 
-}
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    background-color: #ffe5b6;
+    color: rgb(5, 5, 5);
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  
+    width: 150px;
+  
+} 
 
 .buttons button:hover {
     transform: scale(1.1); 
