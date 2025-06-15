@@ -1,5 +1,5 @@
 let currentPage = 1;
-const moviesPerPage = 18;
+const moviesPerPage = 20;
 
 function renderMovie(movie, container) {
   const div = document.createElement("div");

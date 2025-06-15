@@ -140,3 +140,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(autoSlide, 4000);
 });
+
+//toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("sidebarToggle");
+  const sidebar = document.querySelector(".sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
+    document.body.classList.toggle("sidebar-open");
+  });
+});
+
