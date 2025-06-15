@@ -59,7 +59,12 @@ body {
 } 
 
 .buttons button {
-    transition: transform 0.3s ease; 
+    transition: transform 0.fav-ones{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}.3s ease; 
 }
 
 .buttons button:hover {
@@ -237,3 +242,9 @@ body {
   justify-content: center;
 }
 
+.watch-ones{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}

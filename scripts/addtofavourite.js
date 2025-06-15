@@ -1,11 +1,12 @@
 function renderMovie(movie) {
   const isFav = isMovieFavourited(movie.imdbID);
+  const isWatched = isMovieWatched(movie.imdbID); // Comes from addtowatched.js
 
   const div = document.createElement("div");
   div.className = "movie-card";
 
   div.innerHTML = `
-  <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';"/>
+    <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';"/>
     <div class="movie-info">
       <h3>${movie.Title}</h3>
       <p>${movie.Year}</p>
@@ -17,44 +18,40 @@ function renderMovie(movie) {
             class="heart-icon"
           />
         </button>
-         <button class="watch-btn" title="Add to Watchlist" onclick="addToWatchlist('${movie.imdbID}', '${movie.Title}', '${movie.Year}')">
-          <img src="/assets/icons/tick.png" alt="Add to Watchlist" />
+        <button class="watch-btn" title="Toggle Watchlist">
+          <img 
+            src="${isWatched ? "/assets/icons/ticked.png" : "/assets/icons/tick.png"}"
+            alt="Toggle Watchlist"
+            class="tick-icon"
+          />
         </button>
       </div>
     </div>
   `;
 
-  // Add event listeners using JavaScript
   const heartIcon = div.querySelector(".heart-icon");
   heartIcon.addEventListener("click", () =>
     addToFavourites(heartIcon, movie.imdbID, movie.Title, movie.Year, movie.Poster)
   );
 
-  // const watchBtn = div.querySelector(".watch-btn");
-  // watchBtn.addEventListener("click", () =>
-  //   addToWatchlist(movie.imdbID, movie.Title, movie.Year)
-  // );
+  const tickIcon = div.querySelector(".tick-icon");
+  tickIcon.addEventListener("click", () =>
+    addToWatchlist(tickIcon, movie.imdbID, movie.Title, movie.Year, movie.Poster)
+  );
 
   movieContainer.appendChild(div);
 }
 
-const heartIcon = div.querySelector(".heart-icon");
-  heartIcon.addEventListener("click", () =>
-    addToFavourites(heartIcon, movie.imdbID, movie.Title, movie.Year, movie.Poster)
-  );
 function addToFavourites(imgElement, id, title, year, poster) {
   let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 
   const index = favourites.findIndex(movie => movie.id === id);
 
   if (index !== -1) {
-    // Remove from favourites
     favourites.splice(index, 1);
     imgElement.src = "/assets/icons/plain_heart.png";
   } else {
-    // Add to favourites with poster
-    const movie = { id, title, year, poster };
-    favourites.push(movie);
+    favourites.push({ id, title, year, poster });
     imgElement.src = "/assets/icons/red_heart.png";
   }
 
@@ -65,6 +62,3 @@ function isMovieFavourited(id) {
   const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
   return favourites.some(movie => movie.id === id);
 }
-
-
-
