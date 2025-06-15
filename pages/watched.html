@@ -3,7 +3,7 @@
 <head>
     <meta charset = "UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <title>Favourite Movies</title>
+    <title>Watched Movies</title>
     <link rel="stylesheet" href="/css/watched.css"/>
 </head>
 
@@ -19,7 +19,7 @@
          
             <div class="buttons">
                 <button class="home" onclick="location.href='./home.html'">Home</button>
-                 <button class="home" onclick="location.href='./watched.html'">Watched</button>
+                 <button class="home" onclick="location.href='./favourite.html'">Favourites</button>
             </div>
 
         </div>
@@ -29,13 +29,14 @@
 <section class="main">
    
   <div class="sidebar">
-      <h2>Favourites</h2>
+      <h2>Watched</h2>
       <img src="/assets/icons/ticked.png" alt="heart_logo"> 
   </div>
 
    
   <div class="movie-list">
-      <div id="favouritesContainer" class="fav-ones"></div>
+      <div id="watchedContainer" class="watch-ones"></div>
+
   </div>
 
 </section>
@@ -71,7 +72,7 @@
   </footer>
 <script src="/scripts/favourite.js"></script>
  <script src="/scripts/pagination.js"></script>
-
+ <script src="/scripts/watched.js"></script>
  
 </body>
 </html>

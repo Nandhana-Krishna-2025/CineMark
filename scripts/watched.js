@@ -1,13 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const favouritesContainer = document.getElementById("favouritesContainer");
-  const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+// watched.js
 
-  if (favourites.length === 0) {
-    favouritesContainer.innerHTML = "<p>No favourite movies added yet.</p>";
+document.addEventListener("DOMContentLoaded", () => {
+  const watchedContainer = document.getElementById("watchedContainer");
+  const watched = JSON.parse(localStorage.getItem("watched")) || [];
+
+  if (watched.length === 0) {
+    watchedContainer.innerHTML = "<p>No watched movies added yet.</p>";
     return;
   }
 
-  favourites.forEach(movie => {
+  watched.forEach(movie => {
     const poster = movie.poster && movie.poster !== "N/A" ? movie.poster : "/assets/images/placeholder.png";
 
     const card = document.createElement("div");
@@ -19,29 +21,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${movie.title}</h3>
         <p>${movie.year}</p>
         <div class="movie-actions">
-          <button class="fav-btn" title="Remove from Favourites">
-            <img src="/assets/icons/red_heart.png" alt="Remove from Favourites" class="heart-icon" />
+          <button class="watch-btn" title="Remove from Watchlist">
+            <img src="/assets/icons/ticked.png" alt="Remove from Watchlist" class="tick-icon" />
           </button>
         </div>
       </div>
     `;
 
-    const heartIcon = card.querySelector(".heart-icon");
-    heartIcon.addEventListener("click", () => {
-      removeFromFavourites(movie.id);
+    const tickIcon = card.querySelector(".tick-icon");
+    tickIcon.addEventListener("click", () => {
+      removeFromWatchlist(movie.id);
       card.remove();
 
-      if (favouritesContainer.children.length === 0) {
-        favouritesContainer.innerHTML = "<p>No favourite movies added yet.</p>";
+      if (watchedContainer.children.length === 0) {
+        watchedContainer.innerHTML = "<p>No watched movies added yet.</p>";
       }
     });
 
-    favouritesContainer.appendChild(card);
+    watchedContainer.appendChild(card);
   });
 });
 
-function removeFromFavourites(id) {
-  let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-  favourites = favourites.filter(movie => movie.id !== id);
-  localStorage.setItem("favourites", JSON.stringify(favourites));
+function removeFromWatchlist(id) {
+  let watched = JSON.parse(localStorage.getItem("watched")) || [];
+  watched = watched.filter(movie => movie.id !== id);
+  localStorage.setItem("watched", JSON.stringify(watched));
 }
