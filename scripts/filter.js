@@ -45,8 +45,8 @@
   }
 
   async function applyFilters() {
-    const selectedTypes = getSelectedTypes(); // array
-    const selectedYears = getInputYears();    // array
+    const selectedTypes = getSelectedTypes(); 
+    const selectedYears = getInputYears();    
 
     const results = [];
 
