@@ -44,7 +44,7 @@ function renderMovie(movie) {
 
 function addToFavourites(imgElement, id, title, year, poster) {
   let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
-
+console.log(favourites);
   const index = favourites.findIndex(movie => movie.id === id);
 
   if (index !== -1) {

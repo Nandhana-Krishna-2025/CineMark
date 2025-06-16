@@ -137,7 +137,7 @@ body {
   width: 150px;
   height: 75px;
   margin-right: 10px;
-  background-color: #333;
+  /* background-color: #333; */
   padding: 10px 10px;
   
 }
@@ -252,4 +252,60 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .search-bar input[type="text"] {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .movie-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .movie-card img {
+    height: 280px;
+  }
+
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .movie-list {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fav-ones {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 10px;
+  }
 }
