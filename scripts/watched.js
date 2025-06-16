@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // 🧡 Toggle favourite
+    // Toggle favourite
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
       toggleFavourite(heartIcon, movie);
     });
 
-    // ✅ Remove from watchlist
+    //  Remove from watchlist
     const tickIcon = card.querySelector(".tick-icon");
     tickIcon.addEventListener("click", () => {
       removeFromWatchlist(movie.id);

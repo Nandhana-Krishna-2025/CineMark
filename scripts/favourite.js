@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // 🧡 Remove from favourites
+    // Remove from favourites
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
       removeFromFavourites(movie.id);
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // ✅ Toggle watched status using addToWatchlist
+    //  Toggle watched status using addToWatchlist
     const tickIcon = card.querySelector(".tick-icon");
     tickIcon.addEventListener("click", () => {
       addToWatchlist(tickIcon, movie.id, movie.title, movie.year, movie.poster);
@@ -59,7 +59,7 @@ function removeFromFavourites(id) {
   localStorage.setItem("favourites", JSON.stringify(favourites));
 }
 
-// ✅ You must include or load addtowatched.js before this file so the following function is available:
+//must include or load addtowatched.js before this file so the following function is available:
 function isMovieWatched(id) {
   const watched = JSON.parse(localStorage.getItem("watched")) || [];
   return watched.some(movie => movie.id === id);
