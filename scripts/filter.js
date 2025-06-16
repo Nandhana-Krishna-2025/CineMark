@@ -80,7 +80,7 @@
 
   
   typeCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
-  yearInput.addEventListener("input", debounce(applyFilters, 700));
+  yearInput.addEventListener("input", debounce(applyFilters, 500));
 
   
   function debounce(func, delay) {
