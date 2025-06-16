@@ -101,15 +101,15 @@ body {
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
-  color: #ffe5b6;
-  background-color: #3a3a3a;
+  color: black;
+  background-color: #ffe5b6;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .sidebar h2:hover {
-  background-color: #575757;
+  background-color: #d49f61;
 }
 
 .type-filters label,
@@ -136,16 +136,17 @@ body {
 }
 
 .nav-buttons button {
-  background-color: #3a3a3a;
-  color: #ffe5b6;
+  background-color: #ffe5b6;
+  color: black;
   padding: 10px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 18px;
+
 }
 
 .nav-buttons button:hover {
-  background-color: #575757;
+  background-color: #d49f61; 
 }
 
 .movie-list {
