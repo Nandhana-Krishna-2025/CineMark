@@ -109,6 +109,35 @@ body {
 }
 
 
+
+.pagination-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.pagination-controls button.active-page {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination-controls button:disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+
+
 .footer {
   background-color: #333;
   color: #cfcbcb;
@@ -127,7 +156,7 @@ body {
   width: 150px;
   height: 75px;
   margin-right: 10px;
-  background-color: #333;
+  /* background-color: #333; */
   padding: 10px 10px;
   
 }
@@ -237,3 +266,118 @@ body {
   justify-content: center;
 }
 
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .buttons button {
+    width: 120px;
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .movie-card {
+    width: 300px;
+    height: auto;
+  }
+
+  .movie-card img {
+    height: 350px;
+  }
+
+  .movie-info {
+    height: auto;
+  }
+
+  .icons {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .search-bar input[type="text"] {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .movie-card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .movie-card img {
+    height: 280px;
+  }
+
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .movie-list {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fav-ones {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 10px;
+  }
+}

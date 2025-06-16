@@ -64,3 +64,5 @@ function isMovieWatched(id) {
   const watched = JSON.parse(localStorage.getItem("watched")) || [];
   return watched.some(movie => movie.id === id);
 }
+
+
