@@ -48,9 +48,6 @@ async function fetchAllMovies() {
 
 
 document.addEventListener("DOMContentLoaded", fetchAllMovies);
-
-
-
 const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("input", (e) => {
@@ -68,7 +65,7 @@ window.allFetchedMovies = allFetchedMovies;
 window.keywords = ["The", "A", "Day", "Night", "Man", "Love", "Home", "Batman", "Friends"];
 window.apiKey = "5bedaa04";
 window.currentPage = 1;
-window.moviesPerPage = 18;
+window.moviesPerPage = 20;
 
 function applyFilters() {
   const typeCheckboxes = document.querySelectorAll(".type-filters input[type='checkbox']");
@@ -100,24 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   yearCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
 });
 
-// let currentSlide = 0;
-// const slides = document.querySelectorAll(".slide");
-
-// function showSlide(index) {
-//   slides.forEach((slide, i) => {
-//     slide.style.display = i === index ? "block" : "none";
-//   });
-// }
-
-// function moveSlide(direction) {
-//   currentSlide = (currentSlide + direction + slides.length) % slides.length;
-//   showSlide(currentSlide);
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   showSlide(currentSlide);
-// });
-
+//sider
 let currentSlide = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
