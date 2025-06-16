@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    // 🧡 Remove from favourites
+    // Remove from favourites
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
       removeFromFavourites(movie.id);
