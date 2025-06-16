@@ -3,9 +3,9 @@
   const yearInput = document.getElementById("yearInput");
   const movieContainer = document.getElementById("movieContainer");
 
-  const apiKey = "57d7ef30";
-  const keywords = ["The", "A", "Love", "Night", "Man", "Day"];
-  const fetchLimit = 5; 
+  const apiKey = window.apiKey;
+  const keywords = window.keywords;
+  const fetchLimit = 9; 
 
   function getSelectedTypes() {
     return Array.from(typeCheckboxes)
@@ -25,7 +25,7 @@
   async function fetchMoviesWithFilters(type = "", year = "") {
     let collected = [];
 
-    for (let i = 0; i < Math.min(keywords.length, fetchLimit); i++) {
+    for (let i = 0; i < fetchLimit; i++) {
       const keyword = keywords[i];
       const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(keyword)}${type ? `&type=${type}` : ""}${year ? `&y=${year}` : ""}&page=1`;
 
