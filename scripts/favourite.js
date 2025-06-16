@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const favouritesContainer = document.getElementById("favouritesContainer");
+  console.log("Container found:", favouritesContainer);
   const favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+
+  console.log("no movies", favourites);
 
   if (favourites.length === 0) {
     favouritesContainer.innerHTML = "<p>No favourite movies added yet.</p>";
@@ -35,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Remove from favourites
     const heartIcon = card.querySelector(".heart-icon");
     heartIcon.addEventListener("click", () => {
-      removeFromFavourites(movie.id);
-      card.remove();
+      removeFromFavourites(movie.id); //local storage
+      card.remove();//from page
 
       if (favouritesContainer.children.length === 0) {
         favouritesContainer.innerHTML = "<p>No favourite movies added yet.</p>";
