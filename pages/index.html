@@ -12,7 +12,9 @@
     <header>
   <div class="nav">
     <div class="logo">
-      <img src="/assets/images/logo.png" alt="logo">
+      <a href="index.html">
+        <img src="/assets/images/logo.png" alt="logo">
+      </a>
     </div>
 
     <div class="search-bar-wrapper">
@@ -23,52 +25,43 @@
     </div>
 
     <div class="buttons">
-      <button class="home" onclick="location.href='./index.html'">Home</button>
+      <button class="home" onclick="location.href='./favourite.html'">Favourites</button>
+      <button class="home" onclick="location.href='./watched.html'">Watched</button>
     </div>
   </div>
 </header>
 
-    <section class="main">
+  <section class="main">
+  <!-- Sidebar -->
+  <button id="sidebarToggle" class="sidebar-toggle">Filter</button>
 
-    <!-- Sidebar -->
-    <button id="sidebarToggle" class="sidebar-toggle">Filter</button>
-
-    <div class="sidebar">
-      <h2>Type</h2>
-      <div class="type-filters">
-        <label><input type="checkbox" value="movie"> Movie</label>
-        <label><input type="checkbox" value="series"> Series</label>
-        <label><input type="checkbox" value="episode"> Episode</label>
-      </div>
+  <div class="sidebar">
+    <h2>Type</h2>
+    <div class="type-filters">
+      <label><input type="checkbox" value="movie"> Movie</label>
+      <label><input type="checkbox" value="series"> Series</label>
+      <label><input type="checkbox" value="episode"> Episode</label>
+    </div>
     <h2>Release Year (comma-separated)</h2>
     <input type="text" id="yearInput" placeholder="e.g. 2023,2024" />
+    <div id="yearError" style="color:white; font-size: 14px; margin-top: 6px;"></div>
+  </div>
 
-    
-
-
-
-      <div class="nav-buttons">
-        <button onclick="location.href='favourite.html'">Favourites</button>
-        <button onclick="location.href='watched.html'">Watched</button>
+  <div class="movie-list">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide"><img src="/assets/images/slider1.jpg" alt="Slide 1" /></div>
+        <div class="slide"><img src="/assets/images/slider2.jpg" alt="Slide 2" /></div>
+        <div class="slide"><img src="/assets/images/slider3.jpg" alt="Slide 3" /></div>
+        <div class="slide"><img src="/assets/images/slider4.jpg" alt="Slide 4" /></div>
       </div>
     </div>
 
-    
-    <div class="movie-list">
-       <div class="slider-container">
-  <div class="slider">
-    <div class="slide"><img src="/assets/images/slider1.jpg" alt="Slide 1" /></div>
-    <div class="slide"><img src="/assets/images/slider2.jpg" alt="Slide 2" /></div>
-    <div class="slide"><img src="/assets/images/slider3.jpg" alt="Slide 3" /></div>
-    <div class="slide"><img src="/assets/images/slider4.jpg" alt="Slide 3" /></div>
+    <div id="movieContainer" class="movie-grid"></div>
+    <div id="paginationControls" class="pagination-controls"></div>
   </div>
-</div>
+</section>
 
-       <div id="movieContainer" class="movie-grid"></div>
-       <div id="paginationControls" class="pagination-controls"></div>    
-    </div>
-
-  </section>
 
 <footer class="footer">
   <div class="footer-left">
@@ -108,6 +101,7 @@
   <script src="/scripts/search.js"></script>
    <script src="/scripts//addtofavourite.js"></script>
   <script src="/scripts/addtowatched.js"></script>
+    <script src="/scripts/viewMovieDetails.js"></script>
 
   </body>
 </html>
