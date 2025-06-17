@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     words = newWords;
 
     fetchMoviesByWords(words);
-  }, 300)
+  }, 200)
 );
 
 
