@@ -217,6 +217,7 @@ body {
   height: 450px;
   object-fit: cover;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .movie-info {
