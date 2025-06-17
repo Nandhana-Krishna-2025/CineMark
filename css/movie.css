@@ -203,3 +203,10 @@ body {
   border-top: 1px solid #333;
   padding-top: 15px;
 }
+
+.loading-spinner {
+  display: block;
+  margin: 60px auto;
+  width: 60px;
+  height: 60px;
+}
