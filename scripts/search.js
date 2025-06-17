@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Deduplicate using imdbID
+
     const unique = Array.from(new Map(results.map(m => [m.imdbID, m])).values());
     window.renderPage(unique, movieContainer);
   }
@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`)
           .then(res => res.json())
-          .then(full => {
-            window.renderPage([full], movieContainer);
+          .then(movieDetails => {
+            window.renderPage([movieDetails], movieContainer);
           });
       });
 
