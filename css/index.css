@@ -91,7 +91,7 @@ body {
   padding: 20px;
   color: #fff;
   max-width: 20%;
- margin-top: 5px;
+  margin-top: 5px;
 }
 
 .sidebar h2 {
@@ -135,6 +135,22 @@ body {
   font-weight: 500;
 }
 
+ .loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+ 
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
  .movie-list {
   flex: 4 1 600px;
@@ -178,6 +194,7 @@ body {
 .slide:first-child {
   display: block;
 }
+ 
 
 .movie-grid {
   display: flex;

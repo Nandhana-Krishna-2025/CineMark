@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   yearCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
 });
 
-//sider
+//slider
 let currentSlide = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -131,4 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.toggle("sidebar-open");
   });
 });
+
+
+
 
