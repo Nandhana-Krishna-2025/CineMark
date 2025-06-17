@@ -31,7 +31,14 @@ function renderMovie(movie) {
   div.className = "movie-card";
 
   div.innerHTML = `
-    <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.onerror=null;this.src='/assets/images/placeholder.png';"/>
+    <img 
+  src="${movie.Poster}" 
+  alt="${movie.Title}" 
+  class="movie-poster"
+  data-id="${movie.imdbID}"
+  onerror="this.onerror=null;this.src='/assets/images/placeholder.png';"
+/>
+
     <div class="movie-info">
       <h3>${movie.Title}</h3>
       <p>${movie.Year}</p>
@@ -53,6 +60,10 @@ function renderMovie(movie) {
       </div>
     </div>
   `;
+const posterImg = div.querySelector(".movie-poster");
+posterImg.addEventListener("click", () => {
+  viewMovieDetails(movie.imdbID);
+});
 
   const heartIcon = div.querySelector(".heart-icon");
   heartIcon.addEventListener("click", () =>
@@ -111,3 +122,10 @@ function renderPagination(allMovies, container) {
 window.renderPage = renderPage;
 window.renderMovie = renderMovie;
 window.renderPagination = renderPagination;
+
+
+// function viewMovieDetails(imdbID) {
+//   // Step 2 will go here later: fetch, store, redirect
+//   console.log("Clicked movie ID:", imdbID);
+// }
+// window.viewMovieDetails = viewMovieDetails;
