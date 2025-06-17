@@ -11,8 +11,8 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
+  color: #0c0b0b;
+  background-color: #1c1c1c;
   display: flex;
   flex-direction: column;
 }
@@ -57,21 +57,60 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  
 }
+
 
 .movie-details {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* max-width: 900px; */
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #faf8f5;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+  margin: 40px auto;
 }
 
-.movie-details h1 {
+.movie-poster {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movi.movie-info {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* spacing between text blocks */
+  padding-top: 10px;
+}
+
+.movie-info p {
+  font-size: 1.1rem;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+.movie-info p strong {
+  font-weight: bold;
+  color: #ffe5b6; /* subtle highlight for labels */
+}
+
+.movie-info h1 {
+  font-size: 2rem;
+  color: #fff;
   margin-bottom: 20px;
 }
-
 
 /* Footer */
 .footer {
@@ -87,6 +126,7 @@ body {
   border-top: 2px solid #333;
   width: 100%;
 }
+
 .footer-left,
 .footer-middle,
 .footer-right {
@@ -96,16 +136,19 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .footer-logo img {
   width: 150px;
   margin-bottom: 10px;
 }
+
 .footer-description {
   font-size: 0.9rem;
   color: #ccc;
   margin-top: 5px;
   max-width: 200px;
 }
+
 .footer-middle h4,
 .footer-right h4 {
   font-size: 1.3rem;
@@ -113,24 +156,29 @@ body {
   margin-bottom: 10px;
   margin-top: 20px;
 }
+
 .footer-middle ul {
   list-style: none;
   padding: 20px;
   margin: 0;
 }
+
 .footer-middle ul li {
   margin: 6px 0;
   padding: 10px;
 }
+
 .footer-middle a {
   text-decoration: none;
   color: #f0f0f0;
   transition: color 0.3s ease;
   font-size: large;
 }
+
 .footer-middle a:hover {
   color: #ffe5b6;
 }
+
 .social-icons {
   display: flex;
   gap: 16px;
@@ -142,9 +190,11 @@ body {
   filter: invert(1);
   transition: transform 0.3s ease;
 }
+
 .social-icons a:hover img {
   transform: scale(1.2);
 }
+
 .footer-bottom {
   width: 100%;
   text-align: center;
