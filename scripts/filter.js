@@ -13,14 +13,35 @@
       .map(cb => cb.value);
   }
 
+  // function getInputYears() {
+  //   const input = yearInput.value.trim();
+  //   if (!input) return [];
+  //   return input
+  //     .split(",")
+  //     .map(y => y.trim())
+  //     .filter(y => /^\d{4}$/.test(y));
+  // }
   function getInputYears() {
-    const input = yearInput.value.trim();
-    if (!input) return [];
-    return input
-      .split(",")
-      .map(y => y.trim())
-      .filter(y => /^\d{4}$/.test(y));
+  const input = yearInput.value.trim();
+  const errorDiv = document.getElementById("yearError");
+
+  if (!input) {
+    errorDiv.textContent = ""; 
+    return [];
   }
+
+  const parts = input.split(",").map(y => y.trim());
+  const invalid = parts.filter(y => !/^\d{4}$/.test(y));
+
+  if (invalid.length > 0) {
+    errorDiv.textContent = "Invalid format: Only 4-digit years separated by commas are allowed.";
+    return []; 
+  } else {
+    errorDiv.textContent = ""; 
+    return parts;
+  }
+}
+
 
   async function fetchMoviesWithFilters(type = "", year = "") {
     let collected = [];
@@ -44,43 +65,74 @@
     return collected;
   }
 
-  async function applyFilters() {
-    const selectedTypes = getSelectedTypes(); 
-    const selectedYears = getInputYears();    
+//   async function applyFilters() {
+//     const selectedTypes = getSelectedTypes(); 
+//     const selectedYears = getInputYears();    
 
-    const results = [];
+//     const results = [];
 
     
-    if (selectedTypes.length === 0 && selectedYears.length === 0) {
-      const defaultMovies = await fetchMoviesWithFilters();
-      window.renderPage(defaultMovies, movieContainer);
-      return;
-    }
+//     if (selectedTypes.length === 0 && selectedYears.length === 0) {
+//       const defaultMovies = await fetchMoviesWithFilters();
+//       window.renderPage(defaultMovies, movieContainer);
+//       return;
+//     }
 
    
-    for (const type of selectedTypes.length ? selectedTypes : [""]) {
-      for (const year of selectedYears.length ? selectedYears : [""]) {
-        const movies = await fetchMoviesWithFilters(type, year);
-        results.push(...movies);
-      }
-    }
+//     for (const type of selectedTypes.length ? selectedTypes : [""]) {
+//       for (const year of selectedYears.length ? selectedYears : [""]) {
+//         const movies = await fetchMoviesWithFilters(type, year);
+//         results.push(...movies);
+//       }
+//     }
 
    
-    // const uniqueMovies = Array.from(
-    //   new Map(results.map(m => [m.imdbID, m])).values()
-    // );
-    const uniqueMovies = Array.from(
-    new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
-);
+//     // const uniqueMovies = Array.from(
+//     //   new Map(results.map(m => [m.imdbID, m])).values()
+//     // );
+//     const uniqueMovies = Array.from(
+//     new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
+// );
 
 
 
-    window.renderPage(uniqueMovies, movieContainer);
+//     window.renderPage(uniqueMovies, movieContainer);
+//   }
+async function applyFilters() {
+  const spinner = document.getElementById("loadingSpinner");
+  spinner.style.display = "block"; 
+
+  const selectedTypes = getSelectedTypes(); 
+  const selectedYears = getInputYears();    
+
+  const results = [];
+
+  if (selectedTypes.length === 0 && selectedYears.length === 0) {
+    const defaultMovies = await fetchMoviesWithFilters();
+    window.renderPage(defaultMovies, movieContainer);
+    spinner.style.display = "none"; 
+    return;
   }
+
+  for (const type of selectedTypes.length ? selectedTypes : [""]) {
+    for (const year of selectedYears.length ? selectedYears : [""]) {
+      const movies = await fetchMoviesWithFilters(type, year);
+      results.push(...movies);
+    }
+  }
+
+  const uniqueMovies = Array.from(
+    new Map(results.map(m => [`${m.Title}-${m.Year}`, m])).values()
+  );
+
+  window.renderPage(uniqueMovies, movieContainer);
+  spinner.style.display = "none"; 
+}
+
 
   
   typeCheckboxes.forEach(cb => cb.addEventListener("change", applyFilters));
-  yearInput.addEventListener("input", debounce(applyFilters, 500));
+  yearInput.addEventListener("input", debounce(applyFilters, 200));
 
   
   function debounce(func, delay) {

@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "movie-card";
 
     card.innerHTML = `
-      <img src="${poster}" alt="${movie.title}" />
+       <img 
+  src="${poster}" 
+  alt="${movie.title}" 
+  class="movie-poster" 
+  data-id="${movie.id}"
+/>
+
       <div class="movie-info">
         <h3>${movie.title}</h3>
         <p>${movie.year}</p>
@@ -31,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     `;
+
+
+
+    //  make poster image clickable
+const posterImg = card.querySelector(".movie-poster");
+posterImg.addEventListener("click", () => {
+  viewMovieDetails(movie.id);  // reuse same function
+});
 
     // Toggle favourite
     const heartIcon = card.querySelector(".heart-icon");

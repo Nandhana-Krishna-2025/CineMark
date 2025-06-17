@@ -1,15 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Movie Details</title>
-  <link rel="stylesheet" href="/css/movie.css" />
+  <link href="/css/movie.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="movie-details-container">
-    <div id="movieDetails">Loading...</div>
-  </div>
 
-  <script src="/scripts/movie.js"></script>
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="/assets/images/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="buttons">
+        <button class="home" onclick="location.href='./favourite.html'">Favourites</button>
+        <button class="home" onclick="location.href='./watched.html'">Watched</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+ 
+
+    <main id="movieDetails" class="movie-details">
+      <h1>Movie Details</h1>
+      <!-- Movie details will be injected here via JS -->
+    </main>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="/assets/images/logo.png" alt="CineMark Logo" />
+      </div>
+      <p class="footer-description">Your ultimate movie browser — powered by OMDb API.</p>
+    </div>
+
+    <div class="footer-middle">
+      <h4>ABOUT</h4>
+      <ul>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>FOLLOW US</h4>
+      <div class="social-icons">
+        <a href="#"><img src="/assets/icons/twitter-icon.png" alt="Twitter" /></a>
+        <a href="#"><img src="/assets/icons/linkedin.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="/assets/icons/facebook.png" alt="Facebook" /></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 CineMark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/scripts/movieDetails.js"></script>
 </body>
 </html>
