@@ -5,10 +5,10 @@ function addToWatchlist(imgElement, id, title, year, poster) {
 
   if (index !== -1) {
     watched.splice(index, 1);
-    imgElement.src = "../assets/icons/tick.png"; // not watched
+    imgElement.src = "assets/icons/tick.png"; // not watched
   } else {
     watched.push({ id, title, year, poster });
-    imgElement.src = "../assets/icons/ticked.png"; //  watched
+    imgElement.src = "assets/icons/ticked.png"; //  watched
   }
 
   localStorage.setItem("watched", JSON.stringify(watched));
