@@ -36,7 +36,7 @@ function renderMovie(movie) {
   alt="${movie.Title}" 
   class="movie-poster"
   data-id="${movie.imdbID}"
-  onerror="this.onerror=null;this.src='/CineMark/assets/images/placeholder.png';"
+  onerror="this.onerror=null;this.src='assets/images/placeholder.png';"
 
 />
 
@@ -46,14 +46,14 @@ function renderMovie(movie) {
       <div class="movie-actions">
         <button class="fav-btn" title="Add to Favourites">
           <img 
-            src="${isFav ? "../assets/icons/red_heart.png" : "CineMark/assets/icons/plain_heart.png"}"
+            src="${isFav ? "assets/icons/red_heart.png" : "assets/icons/plain_heart.png"}"
             alt="Add to Favourites"
             class="heart-icon"
           />
         </button>
         <button class="watch-btn" title="Toggle Watchlist">
           <img 
-            src="${isWatched ? "assets/icons/ticked.png" : "./assets/icons/tick.png"}"
+            src="${isWatched ? "assets/icons/ticked.png" : "assets/icons/tick.png"}"
             alt="Toggle Watchlist"
             class="tick-icon"
           />
