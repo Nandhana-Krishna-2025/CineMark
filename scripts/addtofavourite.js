@@ -49,10 +49,10 @@ console.log(favourites);
 
   if (index !== -1) {
     favourites.splice(index, 1);
-    imgElement.src = "/assets/icons/plain_heart.png";
+    imgElement.src = "../assets/icons/plain_heart.png";
   } else {
     favourites.push({ id, title, year, poster });
-    imgElement.src = "/assets/icons/red_heart.png";
+    imgElement.src = "../assets/icons/red_heart.png";
   }
 
   localStorage.setItem("favourites", JSON.stringify(favourites));
