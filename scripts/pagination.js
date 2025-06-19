@@ -46,14 +46,14 @@ function renderMovie(movie) {
       <div class="movie-actions">
         <button class="fav-btn" title="Add to Favourites">
           <img 
-            src="${isFav ? "CINEMARK/assets/icons/red_heart.png" : "CineMark/assets/icons/plain_heart.png"}"
+            src="${isFav ? "CineMark/assets/icons/red_heart.png" : "CineMark/assets/icons/plain_heart.png"}"
             alt="Add to Favourites"
             class="heart-icon"
           />
         </button>
         <button class="watch-btn" title="Toggle Watchlist">
           <img 
-            src="${isWatched ? "CINEMARK/assets/icons/ticked.png" : "CineMark/assets/icons/tick.png"}"
+            src="${isWatched ? "CineMark/assets/icons/ticked.png" : "CineMark/assets/icons/tick.png"}"
             alt="Toggle Watchlist"
             class="tick-icon"
           />
