@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   watched.forEach(movie => {
-    const poster = movie.poster && movie.poster !== "N/A" ? movie.poster : "/assets/images/placeholder.png";
+    const poster = movie.poster && movie.poster !== "N/A" ? movie.poster : "../assets/images/placeholder.png";
 
     const isFav = isMovieFavourited(movie.id);
-    const heartIconSrc = isFav ? "/assets/icons/red_heart.png" : "/assets/icons/plain_heart.png";
+    const heartIconSrc = isFav ? "../assets/icons/red_heart.png" : "../assets/icons/plain_heart.png";
 
     const card = document.createElement("div");
     card.className = "movie-card";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${heartIconSrc}" alt="Toggle Favourite" class="heart-icon" />
           </button>
           <button class="watch-btn" title="Remove from Watchlist">
-            <img src="/assets/icons/ticked.png" alt="Remove from Watchlist" class="tick-icon" />
+            <img src="../assets/icons/ticked.png" alt="Remove from Watchlist" class="tick-icon" />
           </button>
         </div>
       </div>
@@ -84,10 +84,10 @@ function toggleFavourite(heartIcon, movie) {
 
   if (index !== -1) {
     favourites.splice(index, 1);
-    heartIcon.src = "/assets/icons/plain_heart.png"; // Unfavourited
+    heartIcon.src = "../assets/icons/plain_heart.png"; // Unfavourited
   } else {
     favourites.push(movie);
-    heartIcon.src = "/assets/icons/red_heart.png"; // Favourited
+    heartIcon.src = "../assets/icons/red_heart.png"; // Favourited
   }
 
   localStorage.setItem("favourites", JSON.stringify(favourites));
