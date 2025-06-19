@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   favourites.forEach(movie => {
-    const poster = movie.poster && movie.poster !== "N/A" ? movie.poster : "/assets/images/placeholder.png";
+    const poster = movie.poster && movie.poster !== "N/A" ? movie.poster : "../assets/images/placeholder.png";
 
     const isWatched = isMovieWatched(movie.id); // from addtowatched.js
-    const tickIconSrc = isWatched ? "/assets/icons/ticked.png" : "/assets/icons/tick.png";
+    const tickIconSrc = isWatched ? "../assets/icons/ticked.png" : "../assets/icons/tick.png";
 
     const card = document.createElement("div");
     card.className = "movie-card";
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>${movie.year}</p>
         <div class="movie-actions">
           <button class="fav-btn" title="Remove from Favourites">
-            <img src="/assets/icons/red_heart.png" alt="Remove from Favourites" class="heart-icon" />
+            <img src="../assets/icons/red_heart.png" alt="Remove from Favourites" class="heart-icon" />
           </button>
           <button class="watch-btn" title="Toggle Watchlist">
             <img src="${tickIconSrc}" alt="Toggle Watchlist" class="tick-icon" />
